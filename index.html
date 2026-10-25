@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Você e eu ❤️</title>
+
+  <style>
+    /* Configuração geral */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 25px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #ffffff;
+      background:
+        radial-gradient(ellipse at top, #570000 0%, transparent 65%),
+        linear-gradient(145deg, #050505, #1b0000, #000000);
+    }
+
+    /* Cartão principal */
+    .container {
+      width: 100%;
+      max-width: 650px;
+      padding: 35px 25px;
+      text-align: center;
+      background: rgba(10, 10, 10, 0.96);
+      border: 1px solid #790000;
+      border-radius: 24px;
+      box-shadow: 0 0 45px rgba(255, 0, 0, 0.15);
+      animation: aparecer 1s ease;
+    }
+
+    /* Nome decorativo */
+    .nome {
+      color: #ff3030;
+      font-size: 25px;
+      letter-spacing: 4px;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+
+    /* Título */
+    h1 {
+      margin: 25px 0 15px;
+      font-size: clamp(32px, 7vw, 48px);
+      font-weight: normal;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #ff4040;
+      font-weight: normal;
+    }
+
+    /* Textos */
+    p {
+      color: #dedede;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    /* Fotografia */
+    .foto-casal {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      max-height: 500px;
+      object-fit: cover;
+      margin: 25px auto;
+      border: 2px solid #ff3030;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .foto-casal:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 35px rgba(255, 0, 0, 0.4);
+    }
+
+    /* Botón de la carta */
+    button {
+      margin-top: 22px;
+      padding: 14px 25px;
+      border: 1px solid #ff3030;
+      border-radius: 30px;
+      background: #200000;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.25s ease,
+                  background 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      background: #a00000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    button:focus-visible {
+      outline: 2px solid #ff7777;
+      outline-offset: 4px;
+    }
+
+    /* Carta */
+    #carta {
+      margin-top: 30px;
+      padding: 22px;
+      text-align: left;
+      background: #101010;
+      border: 1px solid #790000;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.1);
+    }
+
+    #carta h2 {
+      text-align: center;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    /* Pie de página */
+    footer {
+      margin-top: 30px;
+      color: #999999;
+      font-size: 13px;
+    }
+
+    /* Animación de entrada */
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Adaptación a pantallas pequeñas */
+    @media (max-width: 480px) {
+      .container {
+        padding: 28px 18px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      #carta {
+        padding: 17px;
+      }
+    }
+
+    /* Respeta las preferencias de movimiento del dispositivo */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <div class="nome">𝕽𝖆𝖋𝖋𝖆</div>
+    <img
+  src="imagens/nosso-momento.jpg"
+  alt="Um momento especial nosso"
+  class="foto-casal"
+>
+
+    <h1>Oie nena!!</h1>
+
+    <p>
+      Amor, graças a Deus que a gente namora.
+      Não sei o que eu faria sem você,
+      acho que eu ia ficar louco KKK.
+    </p>
+
+    <p>
+      Fiquei aprendendo coisa só pra fazer essas parada aqui
+      ASKASKASKAS.
+    </p>
+
+    <button
+      id="botao"
+      type="button"
+      aria-expanded="false"
+      aria-controls="carta"
+    >
+      Confia em mim vida, abre
+    </button>
+
+    <section id="carta" class="oculto">
+      <h2>Pra você, nena</h2>
+
+      <p>
+        Você é uma pessoa que, desde que chegou na minha vida,
+        me fez muito mais feliz do que eu já era antes.
+        Nosso encontro foi estranho, mas pra mim foi perfeito.
+        Gostei muito do nosso primeiro beijo na frente daquela
+        porta de vidro, esperando o meu pai KKK.
+      </p>
+
+      <p>
+        Espero que tudo dê certo no nosso relacionamento,
+        que a gente continue construindo momentos especiais
+        e que nunca falte carinho, respeito e companheirismo
+        entre nós.
+      </p>
+
+      <p>
+        Com muito carinho e amor:
+        Jonatan, o teu xuxu KKAKSAKSAKAS.
+      </p>
+    </section>
+
+    <footer>
+      Te amo, muie. Sério, leia ❤️
+    </footer>
+
+  </main>
+
+  <script>
+    // Seleciona o botão e a carta
+    const botao = document.getElementById("botao");
+    const carta = document.getElementById("carta");
+
+    // Abre e fecha a carta quando o botão é clicado
+    botao.addEventListener("click", function () {
+      const estaOculta = carta.classList.toggle("oculto");
+      const aberta = !estaOculta;
+
+      botao.textContent = aberta
+        ? "Fecha só se quiser né"
+        : "Confia em mim nena, abra";
+
+      botao.setAttribute("aria-expanded", String(aberta));
+    });
+  </script>
+</body>
+</html>
